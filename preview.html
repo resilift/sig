@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>RESiLIFT Signature Preview</title>
+<style>
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 560px;
+    margin: 40px auto;
+    padding: 0 16px;
+    color: #222;
+  }
+  h1 { font-size: 18px; margin-bottom: 4px; }
+  p.sub { color: #666; font-size: 13px; margin-top: 0; }
+  .lookup-row { display: flex; gap: 8px; margin: 20px 0; }
+  #emailInput {
+    flex: 1;
+    padding: 8px 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  #lookupBtn {
+    padding: 8px 16px;
+    font-size: 14px;
+    background: #0057B8;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  #lookupBtn:disabled { background: #9db8d8; cursor: default; }
+
+  #message { font-size: 14px; margin: 16px 0; }
+  #message.error { color: #cf222e; }
+  #message.info { color: #555; }
+
+  .sig-block { margin-top: 24px; }
+  .sig-block h2 {
+    font-size: 14px;
+    margin: 0 0 8px 0;
+    color: #333;
+  }
+  .preview-box {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 16px;
+    background: #fafafa;
+  }
+  .btn-row { margin-top: 10px; text-align: right; }
+  .copy-btn {
+    padding: 8px 16px;
+    font-size: 14px;
+    background: #2ea44f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .copy-btn:disabled { background: #94d3a2; cursor: default; }
+  .copy-status { font-size: 12px; color: #1a7f37; margin-top: 6px; text-align: right; min-height: 16px; }
+</style>
+</head>
+<body>
+
+  <h1>RESiLIFT Signature Preview</h1>
+  <p class="sub">Look up a company email address to preview and copy its assigned signature.</p>
+
+  <div class="lookup-row">
+    <input type="email" id="emailInput" placeholder="name@resilift.com.au" autocomplete="off" />
+    <button id="lookupBtn">Preview</button>
+  </div>
+
+  <div id="message"></div>
+
+  <div id="previewWrapper"></div>
+
+  <!-- Reuses the exact same TEMPLATES/build functions the Outlook
+       add-in itself uses (functions.js guards its Office.js-specific
+       code so it's safe to load here, outside of Outlook). -->
+  <script src="functions.js"></script>
+  <script>
+    const emailInput = document.getElementById('emailInput');
+    const lookupBtn = document.getElementById('lookupBtn');
+    const messageEl = document.getElementById('message');
+    const previewWrapper = document.getElementById('previewWrapper');
+
+    function setMessage(text, cls) {
+      messageEl.textContent = text || '';
+      messageEl.className = cls || '';
+    }
+
+    // Builds one labeled preview block (heading + rendered signature +
+    // its own Copy button/status) and appends it to previewWrapper.
+    function addSignatureBlock(label, html) {
+      const block = document.createElement('div');
+      block.className = 'sig-block';
+
+      const heading = document.createElement('h2');
+      heading.textContent = label;
+
+      const previewBox = document.createElement('div');
+      previewBox.className = 'preview-box';
+      previewBox.innerHTML = html;
+
+      const btnRow = document.createElement('div');
+      btnRow.className = 'btn-row';
+
+      const copyBtn = document.createElement('button');
+      copyBtn.className = 'copy-btn';
+      copyBtn.textContent = 'Copy Signature';
+
+      const copyStatus = document.createElement('div');
+      copyStatus.className = 'copy-status';
+
+      btnRow.appendChild(copyBtn);
+
+      block.appendChild(heading);
+      block.appendChild(previewBox);
+      block.appendChild(btnRow);
+      block.appendChild(copyStatus);
+
+      attachCopyHandler(copyBtn, copyStatus, previewBox);
+
+      previewWrapper.appendChild(block);
+    }
+
+    // Copies the RENDERED signature (rich HTML), not the HTML source
+    // text — so pasting into Outlook's signature box or a compose
+    // window keeps the real formatting, fonts, links, and layout, the
+    // same intent as the existing Apps Script "Copy Signature to
+    // Clipboard" tool. Bound per-block so each preview has its own
+    // independent copy button/status.
+    function attachCopyHandler(copyBtn, copyStatus, previewBox) {
+      copyBtn.addEventListener('click', async function () {
+        copyStatus.textContent = '';
+        copyBtn.disabled = true;
+
+        try {
+          if (navigator.clipboard && window.ClipboardItem) {
+            const htmlBlob = new Blob([previewBox.innerHTML], { type: 'text/html' });
+            const textBlob = new Blob([previewBox.innerText], { type: 'text/plain' });
+            await navigator.clipboard.write([
+              new ClipboardItem({ 'text/html': htmlBlob, 'text/plain': textBlob })
+            ]);
+          } else {
+            const range = document.createRange();
+            range.selectNodeContents(previewBox);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            document.execCommand('copy');
+            selection.removeAllRanges();
+          }
+          copyStatus.textContent = 'Copied! Paste into your Outlook signature settings.';
+        } catch (err) {
+          copyStatus.textContent = 'Copy failed: ' + err.message;
+        } finally {
+          copyBtn.disabled = false;
+        }
+      });
+    }
+
+    async function lookupAndPreview() {
+      const email = emailInput.value.trim().toLowerCase();
+      previewWrapper.innerHTML = '';
+      setMessage('', '');
+
+      if (!email) {
+        setMessage('Enter an email address first.', 'error');
+        return;
+      }
+
+      lookupBtn.disabled = true;
+      lookupBtn.textContent = 'Loading...';
+
+      try {
+        // Cache-bust on every lookup so this tool always reflects the
+        // latest committed directory.json, regardless of browser or
+        // CDN caching.
+        const url = window.SignatureAddin.DIRECTORY_URL.split('?')[0] + '?_=' + Date.now();
+        const response = await fetch(url);
+        if (!response.ok) throw new Error('Could not load directory (HTTP ' + response.status + ')');
+        const directory = await response.json();
+
+        const user = directory[email];
+        if (!user) {
+          setMessage('No signature found for that address.', 'error');
+          return;
+        }
+
+        // If the new-mail and reply templates are the same, there's
+        // only one signature to show — a single "Signature Preview"
+        // block. If they differ, show both, clearly labeled.
+        const sameTemplate = user.te === user.rte;
+
+        if (sameTemplate) {
+          const html = window.SignatureAddin.buildSignatureHtml(user);
+          if (!html || html.trim() === '') {
+            setMessage('This address is set to no signature.', 'info');
+            return;
+          }
+          addSignatureBlock('Signature Preview', html);
+        } else {
+          const newHtml = window.SignatureAddin.buildSignatureHtml(user);
+          const replyHtml = window.SignatureAddin.buildReplySignatureHtml(user);
+
+          if ((!newHtml || newHtml.trim() === '') && (!replyHtml || replyHtml.trim() === '')) {
+            setMessage('This address is set to no signature for new email or replies.', 'info');
+            return;
+          }
+
+          if (newHtml && newHtml.trim() !== '') {
+            addSignatureBlock('New Email Signature', newHtml);
+          }
+          if (replyHtml && replyHtml.trim() !== '') {
+            addSignatureBlock('Reply Signature', replyHtml);
+          }
+        }
+      } catch (err) {
+        setMessage('Error: ' + err.message, 'error');
+      } finally {
+        lookupBtn.disabled = false;
+        lookupBtn.textContent = 'Preview';
+      }
+    }
+
+    lookupBtn.addEventListener('click', lookupAndPreview);
+    emailInput.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter') lookupAndPreview();
+    });
+  </script>
+
+</body>
+</html>
