@@ -10,7 +10,7 @@
     "te": "test",
     "ne": false,
     "rte": "test",
-    "nb": "<i>Please note I only work Mon-Wed 9am-3pm</i>",
+    "nb": "<i>Please note I only work Mon-Wed 9am-4pm</i>",
     "f": "<div width=\"328\">\n    <a href=\"https://resilift.com.au/\" target=\"_blank\">\n        <img src=\"https://resilift.com.au/sig/assets/footer-banner-1.jpg\" alt=\"Imagine a RESiLIFT in your home!\" style=\"display:block;border:0;\">\n    </a>\n</div>"
   },
   "marketing@resilift.com.au"    : {
@@ -34,34 +34,6 @@
     "l"  : "Queensland",
     "pd" : "0407 576 162",
     "pl" : "+61407576162",
-    "d"  : "Residential Lifts Australia",
-    "te" : "simple",
-    "ne" : false,
-    "rte": "simple",
-    "nb" : "",
-    "f"  : ""
-  },
-  "ben.forde@resilift.com.au"    : {
-    "n"  : "Ben Forde",
-    "t"  : "Sales Consultant",
-    "tl" : "Sales Consultant - Queensland",
-    "l"  : "Queensland",
-    "pd" : "0488 422 634",
-    "pl" : "+61488422634",
-    "d"  : "Residential Lifts Australia",
-    "te" : "simple",
-    "ne" : false,
-    "rte": "simple",
-    "nb" : "",
-    "f"  : ""
-  },
-  "service.qld@resilift.com.au"  : {
-    "n"  : "Joel McGuire",
-    "t"  : "Service Technician",
-    "tl" : "Service Technician - Queensland",
-    "l"  : "Queensland",
-    "pd" : "0457 777 820",
-    "pl" : "+61457777820",
     "d"  : "Residential Lifts Australia",
     "te" : "simple",
     "ne" : false,
