@@ -2,16 +2,16 @@
   "info@resilift.com.au"         : {
     "n": "RESiLIFT Information",
     "t": "Information Technology",
-    "tl": "Information Technology - Queensland",
+    "tl": "Information Technology",
     "l": "Queensland",
     "pd": "0400 123 456",
     "pl": "+61400123456",
     "d": "Residential Lifts Australia",
-    "te": "test",
+    "te": "manufacturer",
     "ne": false,
-    "rte": "test",
-    "nb": "<i>Please note I only work Mon-Wed 9am-5pm</i>",
-    "f": "<div width=\"328\">\n    <a href=\"https://resilift.com.au/\" target=\"_blank\">\n        <img src=\"https://resilift.com.au/sig/assets/footer-banner-1.jpg\" alt=\"Imagine a RESiLIFT in your home!\" style=\"display:block;border:0;\">\n    </a>\n</div>"
+    "rte": "manufacturer",
+    "nb": "<i>Please note I only work Mon-Wed 9am-3pm</i>",
+    "f": ""
   },
   "marketing@resilift.com.au"    : {
     "n"  : "Deborah Chan",
