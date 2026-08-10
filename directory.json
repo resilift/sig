@@ -1,17 +1,17 @@
 {
   "info@resilift.com.au"         : {
-    "n": "RESiLIFT Information",
-    "t": "Information Technology",
-    "tl": "Information Technology",
-    "l": "Queensland",
-    "pd": "0400 123 456",
-    "pl": "+61400123456",
-    "d": "Residential Lifts Australia",
-    "te": "manufacturer",
-    "ne": false,
+    "n"  : "Deborah Chan",
+    "t"  : "Marketing Officer",
+    "tl" : "Marketing Officer",
+    "l"  : "",
+    "pd" : "0402 899 789",
+    "pl" : "+61402899789",
+    "d"  : "RESiLIFT Manufacturing",
+    "te" : "manufacturer",
+    "ne" : false,
     "rte": "manufacturer",
-    "nb": "<i>Please note I only work Mon-Wed 9am-3pm</i>",
-    "f": ""
+    "nb" : "",
+    "f"  : ""
   },
   "marketing@resilift.com.au"    : {
     "n"  : "Deborah Chan",
