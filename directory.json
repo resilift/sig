@@ -1,5 +1,19 @@
 {
-  "info@resilift.com.au"         : {
+  "accounts@resilift.com.au"        : {
+    "n"  : "Margery Jensen",
+    "t"  : "General Manager Operations",
+    "tl" : "General Manager Operations",
+    "l"  : "",
+    "pd" : "0407 843 324",
+    "pl" : "+61407843324",
+    "d"  : "RESiLIFT Manufacturing",
+    "te" : "manufacturer",
+    "ne" : false,
+    "rte": "manufacturer",
+    "nb" : "",
+    "f"  : ""
+  },
+  "info@resilift.com.au"            : {
     "n": "RESiLIFT Information",
     "t": "Information Technology",
     "tl": "Information Technology",
@@ -10,10 +24,10 @@
     "te": "manufacturer",
     "ne": false,
     "rte": "manufacturer",
-    "nb": "",
-    "f": ""
+    "nb": "<i>Please note I only work Mon-Wed 9am-3pm</i>",
+    "f": "<div width=\"328\">\n    <a href=\"https://resilift.com.au/\" target=\"_blank\">\n        <img src=\"https://resilift.com.au/sig/assets/footer-banner-1.jpg\" alt=\"Imagine a RESiLIFT in your home!\" style=\"display:block;border:0;\">\n    </a>\n</div>"
   },
-  "marketing@resilift.com.au"    : {
+  "marketing@resilift.com.au"       : {
     "n"  : "Deborah Chan",
     "t"  : "Marketing Officer",
     "tl" : "Marketing Officer",
@@ -27,7 +41,7 @@
     "nb" : "",
     "f"  : ""
   },
-  "stacey.wright@resilift.com.au": {
+  "stacey.wright@resilift.com.au"   : {
     "n"  : "Stacey Wright",
     "t"  : "Sales Consultant",
     "tl" : "Sales Consultant - Queensland",
@@ -41,7 +55,7 @@
     "nb" : "",
     "f"  : ""
   },
-  "ben.forde@resilift.com.au"    : {
+  "ben.forde@resilift.com.au"       : {
     "n"  : "Ben Forde",
     "t"  : "Sales Consultant",
     "tl" : "Sales Consultant - Queensland",
@@ -55,7 +69,7 @@
     "nb" : "",
     "f"  : ""
   },
-  "service.qld@resilift.com.au"  : {
+  "service.qld@resilift.com.au"     : {
     "n"  : "Joel McGuire",
     "t"  : "Service Technician",
     "tl" : "Service Technician - Queensland",
@@ -66,6 +80,104 @@
     "te" : "simple",
     "ne" : false,
     "rte": "simple",
+    "nb" : "",
+    "f"  : ""
+  },
+  "engineering@resilift.com.au"     : {
+    "n"  : "RESiLIFT Engineering",
+    "t"  : "",
+    "tl" : "",
+    "l"  : "",
+    "pd" : "",
+    "pl" : "",
+    "d"  : "RESiLIFT Manufacturing",
+    "te" : "manufacturer",
+    "ne" : false,
+    "rte": "manufacturer",
+    "nb" : "",
+    "f"  : ""
+  },
+  "office@resilift.com.au"          : {
+    "n"  : "Grace Talbot",
+    "t"  : "Sales & Support ",
+    "tl" : "Sales & Support",
+    "l"  : "",
+    "pd" : "",
+    "pl" : "",
+    "d"  : "RESiLIFT Manufacturing",
+    "te" : "manufacturer",
+    "ne" : false,
+    "rte": "manufacturer",
+    "nb" : "",
+    "f"  : ""
+  },
+  "erica@resilift.com.au"           : {
+    "n"  : "Erica Collins",
+    "t"  : "General Manager Distributors",
+    "tl" : "General Manager Distributors",
+    "l"  : "",
+    "pd" : "0410 886 144",
+    "pl" : "+61410886144",
+    "d"  : "RESiLIFT Manufacturing",
+    "te" : "manufacturer",
+    "ne" : false,
+    "rte": "manufacturer",
+    "nb" : "",
+    "f"  : ""
+  },
+  "accounts.admin@resiilft.com.au"  : {
+    "n"  : "Grace Talbot",
+    "t"  : "Accounts Administration Officer ",
+    "tl" : "Accounts Administration Officer",
+    "l"  : "",
+    "pd" : "0408 552 729",
+    "pl" : "+61408552729",
+    "d"  : "RESiLIFT Manufacturing",
+    "te" : "manufacturer",
+    "ne" : false,
+    "rte": "manufacturer",
+    "nb" : "<i>Please note I only work Tuesday to Thursday only.</i>",
+    "f"  : ""
+  },
+  "lachlan.mckenzie@resilift.com.au": {
+    "n"  : "Lachlan McKenzie",
+    "t"  : "General Manager Engineering",
+    "tl" : "General Manager Engineering",
+    "l"  : "",
+    "pd" : "0439 993 361",
+    "pl" : "+61439993361",
+    "d"  : "RESiLIFT Manufacturing",
+    "te" : "manufacturer",
+    "ne" : false,
+    "rte": "manufacturer",
+    "nb" : "",
+    "f"  : ""
+  },
+  "leo.buttermore@resilift.com.au"  : {
+    "n"  : "Leo Buttermore",
+    "t"  : "Technical & Projects Officer",
+    "tl" : "Technical & Projects Officer",
+    "l"  : "",
+    "pd" : "0483 880 104",
+    "pl" : "+61483880104",
+    "d"  : "RESiLIFT Manufacturing",
+    "te" : "manufacturer",
+    "ne" : false,
+    "rte": "manufacturer",
+    "nb" : "",
+    "f"  : ""
+  },
+  "rosemary@resilift.com.au"        : {
+    "n"  : "Rosemary Van Emmerik",
+    "t"  : "Co-founder",
+    "tl" : "Co-founder",
+    "l"  : "",
+    "pd" : "",
+    "pl" : "",
+    "d"  : "RESiLIFT Manufacturing",
+    "te" : "manufacturer",
+    "ne" : false,
+    "rte": "manufacturer",
     "nb" : "",
     "f"  : ""
   }
