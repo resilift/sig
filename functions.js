@@ -53,7 +53,7 @@ function buildDebugFallbackHtml(errorMessage) {
 // EDIT THIS: point at your hosted directory.json.
 // ---------------------------------------------------------------------
 const SIGNATURE_URL = "https://sig.resilift.com.au/";
-const DIRECTORY_URL = SIGNATURE_URL + "directory.json?v=2";
+const DIRECTORY_URL = SIGNATURE_URL + "directory.json?v=3";
 
 // ---------------------------------------------------------------------
 // Optional free-text/HTML sections around the signature — "nb" (notice)
@@ -65,6 +65,39 @@ const DIRECTORY_URL = SIGNATURE_URL + "directory.json?v=2";
 // safe because directory.json only ever comes from your own controlled
 // sheet, not user-submitted input.
 // ---------------------------------------------------------------------
+
+// function buildSignOffHtml(user) {
+//   if (!user.so || user.nb.toString().trim() === '') return '';
+//   return (
+//     // '<div style="font-family: Arial, Helvetica, sans-serif; font-size: 13px; line-height: 1.3; color: rgb(0, 0, 0); padding-top: 16px;">' + user.nb + '</div>' + // doesn't work
+//     '<div style="margin-top: 16px; font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 17px; mso-line-height-rule: exactly; color: rgb(0, 0, 0);">' + user.sot + '</div>', // works
+//     '<div style="margin-top: 16px; font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 17px; mso-line-height-rule: exactly; color: rgb(0, 0, 0);">' + user.son + '</div>'
+//     // '<p style="margin: 0; font-size: 16px; line-height: 16px; mso-line-height-rule: exactly; color: rgb(0, 0, 0);">&nbsp;</p>' // works
+//   );
+// }
+
+function buildSignOffHtml(user) {
+  const hasSot = user.sot && user.sot.toString().trim() !== '';
+  const hasSon = user.son && user.son.toString().trim() !== '';
+
+  if (!hasSot && !hasSon) return '';
+
+  let html = '';
+  let first = true;
+
+  if (hasSot) {
+    html += '<div style="' + (first ? 'margin-top: 16px;' : 'margin: 0;') + ' font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 17px; mso-line-height-rule: exactly; color: rgb(0, 0, 0);">' + user.sot + '</div>';
+    first = false;
+  }
+  if (hasSon) {
+    html += '<div style="' + (first ? 'margin-top: 16px;' : 'margin: 0;') + ' font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 17px; mso-line-height-rule: exactly; color: rgb(0, 0, 0);">' + user.son + '</div>';
+    first = false;
+  }
+
+  return html;
+}
+
+
 function buildNoticeHtml(user) {
   if (!user.nb || user.nb.toString().trim() === "") return "";
   return (
@@ -237,17 +270,50 @@ const TEMPLATES = {
   },
 
   test: function(user) {
-    const u2 = { ...user, tl: user.t };
+    // const u2 = { ...user, tl: user.t };
+
+    // return (
+    //   TEMPLATES.simple(user) +
+    //   '<p style="margin: 0; font-size: 16px; line-height: 16px; mso-line-height-rule: exactly; color: rgb(0, 0, 0);">&nbsp;</p>' +
+    //   '<p style="margin: 0; font-size: 16px; line-height: 16px; mso-line-height-rule: exactly; color: rgb(0, 0, 0);">&nbsp;</p>' +
+    //   TEMPLATES.distributor(u2) +
+    //   '<p style="margin: 0; font-size: 16px; line-height: 16px; mso-line-height-rule: exactly; color: rgb(0, 0, 0);">&nbsp;</p>' +
+    //   '<p style="margin: 0; font-size: 16px; line-height: 16px; mso-line-height-rule: exactly; color: rgb(0, 0, 0);">&nbsp;</p>' +
+    //   TEMPLATES.manufacturer(u2)
+    // );
 
     return (
-      TEMPLATES.simple(user) +
+      buildSignOffHtml(user) +
+      buildNoticeHtml(user) +
       '<p style="margin: 0; font-size: 16px; line-height: 16px; mso-line-height-rule: exactly; color: rgb(0, 0, 0);">&nbsp;</p>' +
+      '<table role="presentation" cellspacing="0" cellpadding="0" border="0" ' +
+      'style="width:360px; max-width:360px; box-sizing:border-box; border-collapse:collapse; border-spacing:0px">' +
+        '<tbody><tr>' +
+          '<td style="vertical-align:middle; width:120px">' +
+            '<div style="font-family: Arial, Helvetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);">' +
+              '<img src="' + SIGNATURE_URL + 'assets/RESiLIFT_signature_logo_240px.png" ' +
+              'alt="RESiLIFT Logo" width="120" height="88" style="width: 120px; height: 88px; display: block;">' +
+            '</div>' +
+          '</td>' +
+          '<td style="padding-left:11px; vertical-align:middle; width:240px">' +
+            '<table cellspacing="0" cellpadding="0" style="box-sizing:border-box; border-collapse:collapse; border-spacing:0px">' +
+              '<tbody><tr><td>' +
+                '<div style="margin: 0; font-family: Arial, Helvetica, sans-serif; font-size: 15px; line-height: 21px; mso-line-height-rule: exactly; color: rgb(0, 0, 0);"><b>' + escapeHtml(user.n) + '</b></div>' +
+                '<div style="margin: 0; font-family: Arial, Helvetica, sans-serif; font-size: 15px; line-height: 20px; mso-line-height-rule: exactly; color: rgb(0, 0, 0);">' + escapeHtml(user.t) + '</div>' +
+                '<div style="margin: 0; font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 18px; mso-line-height-rule: exactly; color: rgb(0, 0, 0);">' + escapeHtml(user.l) + '</div>' +
+                '<div style="margin: 0; font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 18px; mso-line-height-rule: exactly; color: rgb(0, 0, 0);"><a href="tel:' + escapeHtml(user.pl) + '" target="_blank" style="color: rgb(0, 0, 0); text-decoration: none;">' + escapeHtml(user.pd) + '</a></div>' +
+                '<div style="margin: 0; font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 18px; mso-line-height-rule: exactly; color: rgb(0, 0, 0);"><a href="tel:1300303522" target="_blank" style="color: rgb(0, 0, 0); text-decoration: none;">1300 303 522</a></div>' +
+                '<div style="margin: 0; font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 16px; mso-line-height-rule: exactly; color: rgb(0, 0, 0);"><a href="https://resilift.com.au/" style="color: rgb(0, 0, 0); text-decoration: none;">resilift.com.au</a></div>' +
+              '</td></tr></tbody>' +
+            '</table>' +
+          '</td>' +
+        '</tr></tbody>' +
+      '</table>' +
       '<p style="margin: 0; font-size: 16px; line-height: 16px; mso-line-height-rule: exactly; color: rgb(0, 0, 0);">&nbsp;</p>' +
-      TEMPLATES.distributor(u2) +
-      '<p style="margin: 0; font-size: 16px; line-height: 16px; mso-line-height-rule: exactly; color: rgb(0, 0, 0);">&nbsp;</p>' +
-      '<p style="margin: 0; font-size: 16px; line-height: 16px; mso-line-height-rule: exactly; color: rgb(0, 0, 0);">&nbsp;</p>' +
-      TEMPLATES.manufacturer(u2)
+      buildFooterHtml(user)
     );
+
+
   }
 
 };

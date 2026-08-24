@@ -10,6 +10,8 @@
     "te" : "manufacturer",
     "ne" : false,
     "rte": "manufacturer",
+    "sot": "Kind Regards,",
+    "son": "Margery",
     "nb" : "",
     "f"  : ""
   },
@@ -21,9 +23,11 @@
     "pd" : "0406 451 755",
     "pl" : "+61406451755",
     "d"  : "Elevation Creations",
-    "te" : "simple",
+    "te" : "test",
     "ne" : false,
-    "rte": "simple",
+    "rte": "test",
+    "sot": "Kind Regards,",
+    "son": "Shirley",
     "nb" : "",
     "f"  : ""
   },
@@ -38,6 +42,8 @@
     "te" : "manufacturer",
     "ne" : false,
     "rte": "manufacturer",
+    "sot": "Kind Regards,",
+    "son": "Deborah",
     "nb" : "",
     "f"  : ""
   },
@@ -52,6 +58,8 @@
     "te" : "simple",
     "ne" : false,
     "rte": "simple",
+    "sot": "Kind Regards,",
+    "son": "Stacey",
     "nb" : "",
     "f"  : ""
   },
@@ -66,6 +74,8 @@
     "te" : "simple",
     "ne" : false,
     "rte": "simple",
+    "sot": "Kind Regards,",
+    "son": "Ben",
     "nb" : "",
     "f"  : ""
   },
@@ -80,6 +90,8 @@
     "te" : "simple",
     "ne" : false,
     "rte": "simple",
+    "sot": "Kind Regards,",
+    "son": "Joel",
     "nb" : "",
     "f"  : ""
   },
@@ -94,6 +106,8 @@
     "te" : "manufacturer",
     "ne" : false,
     "rte": "manufacturer",
+    "sot": "Kind Regards,",
+    "son": "RESiLIFT",
     "nb" : "",
     "f"  : ""
   },
@@ -108,6 +122,8 @@
     "te" : "manufacturer",
     "ne" : false,
     "rte": "manufacturer",
+    "sot": "Kind Regards,",
+    "son": "Office",
     "nb" : "",
     "f"  : ""
   },
@@ -122,6 +138,8 @@
     "te" : "manufacturer",
     "ne" : false,
     "rte": "manufacturer",
+    "sot": "Kind Regards,",
+    "son": "Erica",
     "nb" : "",
     "f"  : ""
   },
@@ -136,6 +154,8 @@
     "te" : "manufacturer",
     "ne" : false,
     "rte": "manufacturer",
+    "sot": "Kind Regards,",
+    "son": "Grace",
     "nb" : "<i>Please note: My working days are Tuesday to Thursday.</i>",
     "f"  : ""
   },
@@ -150,6 +170,8 @@
     "te" : "manufacturer",
     "ne" : false,
     "rte": "manufacturer",
+    "sot": "Kind Regards,",
+    "son": "Lachlan",
     "nb" : "",
     "f"  : ""
   },
@@ -164,6 +186,8 @@
     "te" : "manufacturer",
     "ne" : false,
     "rte": "manufacturer",
+    "sot": "Kind Regards,",
+    "son": "Leo",
     "nb" : "",
     "f"  : ""
   },
@@ -178,6 +202,8 @@
     "te" : "manufacturer",
     "ne" : false,
     "rte": "manufacturer",
+    "sot": "Kind Regards,",
+    "son": "Rosemary",
     "nb" : "",
     "f"  : ""
   },
@@ -192,6 +218,8 @@
     "te" : "simple",
     "ne" : false,
     "rte": "simple",
+    "sot": "Kind Regards,",
+    "son": "Shirley",
     "nb" : "",
     "f"  : ""
   },
@@ -206,6 +234,8 @@
     "te" : "simple",
     "ne" : false,
     "rte": "simple",
+    "sot": "Kind Regards,",
+    "son": "Aaron",
     "nb" : "",
     "f"  : ""
   },
@@ -220,6 +250,8 @@
     "te" : "distributor",
     "ne" : false,
     "rte": "distributor",
+    "sot": "Kind Regards,",
+    "son": "Nicole",
     "nb" : "",
     "f"  : ""
   },
@@ -234,6 +266,8 @@
     "te" : "distributor",
     "ne" : false,
     "rte": "distributor",
+    "sot": "Kind Regards,",
+    "son": "Scott",
     "nb" : "",
     "f"  : ""
   },
@@ -248,6 +282,8 @@
     "te" : "distributor",
     "ne" : false,
     "rte": "distributor",
+    "sot": "Kind Regards,",
+    "son": "Alison",
     "nb" : "",
     "f"  : ""
   },
@@ -262,6 +298,8 @@
     "te" : "distributor",
     "ne" : false,
     "rte": "distributor",
+    "sot": "Kind Regards,",
+    "son": "Kate ",
     "nb" : "",
     "f"  : ""
   },
@@ -276,6 +314,8 @@
     "te" : "simple",
     "ne" : false,
     "rte": "simple",
+    "sot": "Kind Regards,",
+    "son": "Joe",
     "nb" : "",
     "f"  : ""
   },
@@ -290,6 +330,8 @@
     "te" : "simple",
     "ne" : false,
     "rte": "simple",
+    "sot": "Kind Regards,",
+    "son": "Rich",
     "nb" : "",
     "f"  : ""
   },
@@ -304,6 +346,8 @@
     "te" : "simple",
     "ne" : false,
     "rte": "simple",
+    "sot": "Kind Regards,",
+    "son": "Lachlan",
     "nb" : "",
     "f"  : ""
   },
@@ -318,6 +362,8 @@
     "te" : "simple",
     "ne" : false,
     "rte": "simple",
+    "sot": "Kind Regards,",
+    "son": "Mark",
     "nb" : "",
     "f"  : ""
   },
@@ -332,6 +378,8 @@
     "te" : "simple",
     "ne" : false,
     "rte": "simple",
+    "sot": "Kind Regards,",
+    "son": "David",
     "nb" : "",
     "f"  : ""
   }

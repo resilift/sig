@@ -5,7 +5,7 @@
   xmlns:mailappor="http://schemas.microsoft.com/office/mailappversionoverrides/1.0" xsi:type="MailApp">
 
   <Id>f10b1d99-325c-44a2-8619-33a3721a95dd</Id>
-  <Version>1.0.0.2</Version>
+  <Version>1.0.0.3</Version>
   <ProviderName>RESiLIFT</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="Company Signature" />
@@ -35,7 +35,7 @@
   <FormSettings>
     <Form xsi:type="ItemEdit"> <!-- Changing to ItemRead breaks it -->
       <DesktopSettings>
-        <SourceLocation DefaultValue="https://sig.resilift.com.au/functions.html?v=2" />
+        <SourceLocation DefaultValue="https://sig.resilift.com.au/functions.html?v=3" />
       </DesktopSettings>
     </Form>
   </FormSettings>
@@ -93,8 +93,8 @@
           <bt:Image id="Icon80x80" DefaultValue="https://sig.resilift.com.au/assets/icon-80.png" />
         </bt:Images>
         <bt:Urls>
-          <bt:Url id="Autorun" DefaultValue="https://sig.resilift.com.au/functions.html?v=2" />
-          <bt:Url id="runtimeJs" DefaultValue="https://sig.resilift.com.au/functions.js?v=2" />
+          <bt:Url id="Autorun" DefaultValue="https://sig.resilift.com.au/functions.html?v=3" />
+          <bt:Url id="runtimeJs" DefaultValue="https://sig.resilift.com.au/functions.js?v=3" />
         </bt:Urls>
       </Resources>
 
