@@ -28,7 +28,7 @@
     "rte": "test",
     "sot": "Kind Regards,",
     "son": "Shirley",
-    "nb" : "",
+    "nb" : "<i>Please note: My working days are Tuesday to Thursday.</i>",
     "f"  : ""
   },
   "marketing@resilift.com.au"       : {
@@ -292,8 +292,8 @@
     "t"  : "Office Administration",
     "tl" : "Office Administration",
     "l"  : "Melbourne & Regional Victoria",
-    "pd" : "0406 072 827",
-    "pl" : "+61406072827",
+    "pd" : "",
+    "pl" : "",
     "d"  : "Elevation Creations",
     "te" : "distributor",
     "ne" : false,
