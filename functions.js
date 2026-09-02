@@ -53,7 +53,7 @@ function buildDebugFallbackHtml(errorMessage) {
 // EDIT THIS: point at your hosted directory.json.
 // ---------------------------------------------------------------------
 const SIGNATURE_URL = "https://sig.resilift.com.au/";
-const DIRECTORY_URL = SIGNATURE_URL + "directory.json?v=4";
+const DIRECTORY_URL = SIGNATURE_URL + "directory.json?v=5";
 
 // ---------------------------------------------------------------------
 // Optional free-text/HTML sections around the signature — "nb" (notice)
@@ -139,18 +139,18 @@ const TEMPLATES = {
 
   simple: function (user) {
     return (
+      buildSignOffHtml(user) +
       buildNoticeHtml(user) +
-      '<p style="margin: 0; font-size: 16px; line-height: 16px; mso-line-height-rule: exactly; color: rgb(0, 0, 0);">&nbsp;</p>' +
       '<table role="presentation" cellspacing="0" cellpadding="0" border="0" ' +
       'style="width:360px; max-width:360px; box-sizing:border-box; border-collapse:collapse; border-spacing:0px">' +
         '<tbody><tr>' +
-          '<td style="vertical-align:middle; width:120px">' +
+          '<td style="padding-top:16px; padding-bottom:16px; mso-padding-alt:16px 0px 16px 0px; vertical-align:middle; width:120px">' +
             '<div style="font-family: Arial, Helvetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);">' +
               '<img src="' + SIGNATURE_URL + 'assets/RESiLIFT_signature_logo_240px.png" ' +
               'alt="RESiLIFT Logo" width="120" height="88" style="width: 120px; height: 88px; display: block;">' +
             '</div>' +
           '</td>' +
-          '<td style="padding-left:11px; vertical-align:middle; width:240px">' +
+          '<td style="padding-top:16px; padding-bottom:16px; padding-left:11px; mso-padding-alt:16px 0px 16px 11px; vertical-align:middle; width:240px">' +
             '<table cellspacing="0" cellpadding="0" style="box-sizing:border-box; border-collapse:collapse; border-spacing:0px">' +
               '<tbody><tr><td>' +
                 '<div style="margin: 0; font-family: Arial, Helvetica, sans-serif; font-size: 15px; line-height: 21px; mso-line-height-rule: exactly; color: rgb(0, 0, 0);"><b>' + escapeHtml(user.n) + '</b></div>' +
@@ -164,7 +164,6 @@ const TEMPLATES = {
           '</td>' +
         '</tr></tbody>' +
       '</table>' +
-      '<p style="margin: 0; font-size: 16px; line-height: 16px; mso-line-height-rule: exactly; color: rgb(0, 0, 0);">&nbsp;</p>' +
       buildFooterHtml(user)
     );
   },
@@ -199,18 +198,18 @@ const TEMPLATES = {
 
   distributor: function (user) {
     return (
+      buildSignOffHtml(user) +
       buildNoticeHtml(user) +
-      '<p style="margin: 0; font-size: 16px; line-height: 16px; mso-line-height-rule: exactly; color: rgb(0, 0, 0);">&nbsp;</p>' +
       '<table role="presentation" cellspacing="0" cellpadding="0" border="0" ' +
       'style="width:360px; max-width:360px; box-sizing:border-box; border-collapse:collapse; border-spacing:0px">' +
         '<tbody><tr>' +
-          '<td style="vertical-align:middle; width:120px">' +
+          '<td style="padding-top:16px; padding-bottom:16px; mso-padding-alt:16px 0px 16px 0px; vertical-align:middle; width:120px">' +
             '<div style="font-family: Arial, Helvetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);">' +
               '<img src="' + SIGNATURE_URL + 'assets/RESiLIFT_signature_logo_240px.png" ' +
               'alt="RESiLIFT Logo" width="120" height="88" style="width: 120px; height: 88px; display: block;">' +
             '</div>' +
           '</td>' +
-          '<td style="padding-left:11px; vertical-align:middle; width:240px">' +
+          '<td style="padding-top:16px; padding-bottom:16px; padding-left:11px; mso-padding-alt:16px 0px 16px 11px; vertical-align:middle; width:240px">' +
             '<table cellspacing="0" cellpadding="0" style="box-sizing:border-box; border-collapse:collapse; border-spacing:0px">' +
               '<tbody><tr><td>' +
                 '<div style="margin: 0; font-family: Arial, Helvetica, sans-serif; font-size: 15px; line-height: 21px; mso-line-height-rule: exactly; color: rgb(0, 0, 0);"><b>' + escapeHtml(user.n) + '</b></div>' +
@@ -225,25 +224,24 @@ const TEMPLATES = {
           '</td>' +
         '</tr></tbody>' +
       '</table>' +
-      '<p style="margin: 0; font-size: 16px; line-height: 16px; mso-line-height-rule: exactly; color: rgb(0, 0, 0);">&nbsp;</p>' +
       buildFooterHtml(user)
     );
   },
 
   manufacturer: function (user) {
     return (
+      buildSignOffHtml(user) +
       buildNoticeHtml(user) +
-      '<p style="margin: 0; font-size: 16px; line-height: 16px; mso-line-height-rule: exactly; color: rgb(0, 0, 0);">&nbsp;</p>' +
       '<table role="presentation" cellspacing="0" cellpadding="0" border="0" ' +
       'style="width:360px; max-width:360px; box-sizing:border-box; border-collapse:collapse; border-spacing:0px">' +
         '<tbody><tr>' +
-          '<td style="vertical-align:middle; width:120px">' +
+          '<td style="padding-top:16px; padding-bottom:16px; mso-padding-alt:16px 0px 16px 0px; vertical-align:middle; width:120px">' +
             '<div style="font-family: Arial, Helvetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);">' +
               '<img src="' + SIGNATURE_URL + 'assets/RESiLIFT_Manufacturing_Logo.png" ' +
               'alt="RESiLIFT Logo" width="120" height="96"style="width: 120px; height: 95px; display: block;">' +
             '</div>' +
           '</td>' +
-          '<td style="padding-left:10px; vertical-align:middle; width:240px">' +
+          '<td style="padding-top:16px; padding-bottom:16px; padding-left:10px; mso-padding-alt:16px 0px 16px 10px; vertical-align:middle; width:240px">' +
             '<table cellspacing="0" cellpadding="0" style="box-sizing:border-box; border-collapse:collapse; border-spacing:0px">' +
               '<tbody><tr><td>' +
                 '<div style="margin: 0; font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 22px; mso-line-height-rule: exactly; color: rgb(0, 0, 0);"><b>' + escapeHtml(user.n) + '</b></div>' +
@@ -257,7 +255,6 @@ const TEMPLATES = {
           '</td>' +
         '</tr></tbody>' +
       '</table>' +
-      '<p style="margin: 0; font-size: 16px; line-height: 16px; mso-line-height-rule: exactly; color: rgb(0, 0, 0);">&nbsp;</p>' +
       buildFooterHtml(user)
     );
   },
