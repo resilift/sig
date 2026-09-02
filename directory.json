@@ -10,26 +10,26 @@
     "te" : "manufacturer",
     "ne" : false,
     "rte": "manufacturer",
-    "sot": "Kind Regards,",
+    "sot": "Kind regards,",
     "son": "Margery",
     "nb" : "",
     "f"  : ""
   },
   "info@resilift.com.au"            : {
-    "n"  : "Office Support Test",
-    "t"  : "Installation & Servicing",
-    "tl" : "Installation & Servicing - Melbourne & Regional Victoria",
-    "l"  : "Melbourne & Regional Victoria",
-    "pd" : "0400 123 456",
-    "pl" : "+61400123456",
-    "d"  : "Elevation Creations",
-    "te" : "test",
-    "ne" : false,
+    "n": "Office Support Test 2",
+    "t": "Installation & Servicing",
+    "tl": "Installation & Servicing - Melbourne & Regional Victoria",
+    "l": "Melbourne & Regional Victoria",
+    "pd": "0400 123 456",
+    "pl": "+61400123456",
+    "d": "Elevation Creations",
+    "te": "test",
+    "ne": false,
     "rte": "test",
     "sot": "Kind regards,",
     "son": "Office",
-    "nb" : "",
-    "f"  : ""
+    "nb": "<i>Please note: My working days are Tuesday to Thursday.</i>",
+    "f": "<a href=\"https://resilift.com.au/\" target=\"_blank\">\n    <img src=\"https://resilift.com.au/sig/assets/footer-banner-1.jpg\" alt=\"Imagine a RESiLIFT in your home!\" width=\"360\" height=\"87\" style=\"display:block; border:0; width:360px; height:87px;\">\n</a>"
   },
   "marketing@resilift.com.au"       : {
     "n"  : "Deborah Chan",
@@ -42,7 +42,7 @@
     "te" : "manufacturer",
     "ne" : false,
     "rte": "manufacturer",
-    "sot": "Kind Regards,",
+    "sot": "Kind regards,",
     "son": "Deborah",
     "nb" : "",
     "f"  : ""
@@ -58,7 +58,7 @@
     "te" : "simple",
     "ne" : false,
     "rte": "simple",
-    "sot": "Kind Regards,",
+    "sot": "Kind regards,",
     "son": "Stacey",
     "nb" : "",
     "f"  : ""
@@ -74,7 +74,7 @@
     "te" : "simple",
     "ne" : false,
     "rte": "simple",
-    "sot": "Kind Regards,",
+    "sot": "Kind regards,",
     "son": "Ben",
     "nb" : "",
     "f"  : ""
@@ -90,7 +90,7 @@
     "te" : "simple",
     "ne" : false,
     "rte": "simple",
-    "sot": "Kind Regards,",
+    "sot": "Kind regards,",
     "son": "Joel",
     "nb" : "",
     "f"  : ""
@@ -138,7 +138,7 @@
     "te" : "manufacturer",
     "ne" : false,
     "rte": "manufacturer",
-    "sot": "Kind Regards,",
+    "sot": "Kind regards,",
     "son": "Erica",
     "nb" : "",
     "f"  : ""
@@ -154,7 +154,7 @@
     "te" : "manufacturer",
     "ne" : false,
     "rte": "manufacturer",
-    "sot": "Kind Regards,",
+    "sot": "Kind regards,",
     "son": "Grace",
     "nb" : "<i>Please note: My working days are Tuesday to Thursday.</i>",
     "f"  : ""
@@ -170,7 +170,7 @@
     "te" : "manufacturer",
     "ne" : false,
     "rte": "manufacturer",
-    "sot": "Kind Regards,",
+    "sot": "Kind regards,",
     "son": "Lachlan",
     "nb" : "",
     "f"  : ""
@@ -186,7 +186,7 @@
     "te" : "manufacturer",
     "ne" : false,
     "rte": "manufacturer",
-    "sot": "Kind Regards,",
+    "sot": "Kind regards,",
     "son": "Leo",
     "nb" : "",
     "f"  : ""
@@ -202,7 +202,7 @@
     "te" : "manufacturer",
     "ne" : false,
     "rte": "manufacturer",
-    "sot": "Kind Regards,",
+    "sot": "Kind regards,",
     "son": "Rosemary",
     "nb" : "",
     "f"  : ""
@@ -218,7 +218,7 @@
     "te" : "simple",
     "ne" : false,
     "rte": "simple",
-    "sot": "Kind Regards,",
+    "sot": "Kind regards,",
     "son": "Shirley",
     "nb" : "",
     "f"  : ""
@@ -234,7 +234,7 @@
     "te" : "simple",
     "ne" : false,
     "rte": "simple",
-    "sot": "Kind Regards,",
+    "sot": "Kind regards,",
     "son": "Aaron",
     "nb" : "",
     "f"  : ""
@@ -250,7 +250,7 @@
     "te" : "distributor",
     "ne" : false,
     "rte": "distributor",
-    "sot": "Kind Regards,",
+    "sot": "Kind regards,",
     "son": "Nicole",
     "nb" : "",
     "f"  : ""
@@ -266,7 +266,7 @@
     "te" : "distributor",
     "ne" : false,
     "rte": "distributor",
-    "sot": "Kind Regards,",
+    "sot": "Kind regards,",
     "son": "Scott",
     "nb" : "",
     "f"  : ""
@@ -282,7 +282,7 @@
     "te" : "distributor",
     "ne" : false,
     "rte": "distributor",
-    "sot": "Kind Regards,",
+    "sot": "Kind regards,",
     "son": "Alison",
     "nb" : "",
     "f"  : ""
@@ -298,7 +298,7 @@
     "te" : "distributor",
     "ne" : false,
     "rte": "distributor",
-    "sot": "Kind Regards,",
+    "sot": "Kind regards,",
     "son": "Kate ",
     "nb" : "",
     "f"  : ""
@@ -314,7 +314,7 @@
     "te" : "simple",
     "ne" : false,
     "rte": "simple",
-    "sot": "Kind Regards,",
+    "sot": "Kind regards,",
     "son": "Joe",
     "nb" : "",
     "f"  : ""
@@ -330,7 +330,7 @@
     "te" : "simple",
     "ne" : false,
     "rte": "simple",
-    "sot": "Kind Regards,",
+    "sot": "Kind regards,",
     "son": "Rich",
     "nb" : "",
     "f"  : ""
@@ -346,7 +346,7 @@
     "te" : "simple",
     "ne" : false,
     "rte": "simple",
-    "sot": "Kind Regards,",
+    "sot": "Kind regards,",
     "son": "Lachlan",
     "nb" : "",
     "f"  : ""
@@ -362,7 +362,7 @@
     "te" : "simple",
     "ne" : false,
     "rte": "simple",
-    "sot": "Kind Regards,",
+    "sot": "Kind regards,",
     "son": "Mark",
     "nb" : "",
     "f"  : ""
@@ -378,7 +378,7 @@
     "te" : "simple",
     "ne" : false,
     "rte": "simple",
-    "sot": "Kind Regards,",
+    "sot": "Kind regards,",
     "son": "David",
     "nb" : "",
     "f"  : ""
@@ -394,7 +394,7 @@
     "te" : "distributor",
     "ne" : false,
     "rte": "distributor",
-    "sot": "Kind Regards,",
+    "sot": "Kind regards,",
     "son": "Loreen",
     "nb" : "",
     "f"  : ""
