@@ -16,7 +16,7 @@
     "f"  : ""
   },
   "info@resilift.com.au"            : {
-    "n"  : "Office Support",
+    "n"  : "Office Support Test",
     "t"  : "Installation & Servicing",
     "tl" : "Installation & Servicing - Melbourne & Regional Victoria",
     "l"  : "Melbourne & Regional Victoria",
@@ -26,7 +26,7 @@
     "te" : "test",
     "ne" : false,
     "rte": "test",
-    "sot": "Kind Regards,",
+    "sot": "Kind regards,",
     "son": "Office",
     "nb" : "",
     "f"  : ""
