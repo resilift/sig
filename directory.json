@@ -19,17 +19,17 @@
     "n"  : "Deborah Chan",
     "t"  : "Marketing Officer",
     "tl" : "Marketing Officer",
-    "l"  : "",
+    "l"  : "Queensland",
     "pd" : "0402 899 789",
     "pl" : "+61402899789",
     "d"  : "RESiLIFT Manufacturing",
-    "te" : "manufacturer",
+    "te" : "test",
     "ne" : false,
-    "rte": "manufacturer",
+    "rte": "test",
     "sot": "Kind regards,",
     "son": "Deborah",
     "nb": "<i>Please note: My working days are Tuesday to Thursday.</i>",
-    "f": "<a href=\"https://resilift.com.au/\" target=\"_blank\">\n    <img src=\"https://resilift.com.au/sig/assets/footer-banner-1.jpg\" alt=\"Imagine a RESiLIFT in your home!\" width=\"360\" height=\"87\" style=\"display:block; border:0; width:360px; height:87px;\">\n</a>"
+    "f": ""
   },
   "marketing@resilift.com.au"       : {
     "n"  : "Deborah Chan",
