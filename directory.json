@@ -11,25 +11,25 @@
     "ne" : false,
     "rte": "manufacturer",
     "sot": "Kind regards,",
-    "son": "Margery",
+    "son": "",
     "nb" : "",
     "f"  : ""
   },
   "info@resilift.com.au"            : {
-    "n"  : "Deborah Chan",
-    "t"  : "Marketing Officer",
-    "tl" : "Marketing Officer",
-    "l"  : "Queensland",
-    "pd" : "0402 899 789",
-    "pl" : "+61402899789",
-    "d"  : "RESiLIFT Manufacturing",
-    "te" : "test",
-    "ne" : false,
+    "n": "Office Support",
+    "t": "Installation & Servicing",
+    "tl": "Installation & Servicing - Melbourne & Regional Victoria",
+    "l": "Melbourne & Regional Victoria",
+    "pd": "0400 123 456",
+    "pl": "+61400123456",
+    "d": "Elevation Creations",
+    "te": "test",
+    "ne": false,
     "rte": "test",
     "sot": "Kind regards,",
-    "son": "Deborah",
+    "son": "",
     "nb": "<i>Please note: My working days are Tuesday to Thursday.</i>",
-    "f": ""
+    "f": "<a href=\"https://resilift.com.au/\" target=\"_blank\">\n    <img src=\"https://resilift.com.au/sig/assets/footer-banner-1.jpg\" alt=\"Imagine a RESiLIFT in your home!\" width=\"360\" height=\"87\" style=\"display:block; border:0; width:360px; height:87px;\">\n</a>"
   },
   "marketing@resilift.com.au"       : {
     "n"  : "Deborah Chan",
@@ -43,7 +43,7 @@
     "ne" : false,
     "rte": "manufacturer",
     "sot": "Kind regards,",
-    "son": "Deborah",
+    "son": "",
     "nb" : "",
     "f"  : ""
   },
@@ -59,7 +59,7 @@
     "ne" : false,
     "rte": "simple",
     "sot": "Kind regards,",
-    "son": "Stacey",
+    "son": "",
     "nb" : "",
     "f"  : ""
   },
@@ -75,7 +75,7 @@
     "ne" : false,
     "rte": "simple",
     "sot": "Kind regards,",
-    "son": "Ben",
+    "son": "",
     "nb" : "",
     "f"  : ""
   },
@@ -91,7 +91,7 @@
     "ne" : false,
     "rte": "simple",
     "sot": "Kind regards,",
-    "son": "Joel",
+    "son": "",
     "nb" : "",
     "f"  : ""
   },
@@ -139,7 +139,7 @@
     "ne" : false,
     "rte": "manufacturer",
     "sot": "Kind regards,",
-    "son": "Erica",
+    "son": "",
     "nb" : "",
     "f"  : ""
   },
@@ -155,7 +155,7 @@
     "ne" : false,
     "rte": "manufacturer",
     "sot": "Kind regards,",
-    "son": "Grace",
+    "son": "",
     "nb" : "<i>Please note: My working days are Tuesday to Thursday.</i>",
     "f"  : ""
   },
@@ -171,7 +171,7 @@
     "ne" : false,
     "rte": "manufacturer",
     "sot": "Kind regards,",
-    "son": "Lachlan",
+    "son": "",
     "nb" : "",
     "f"  : ""
   },
@@ -187,7 +187,7 @@
     "ne" : false,
     "rte": "manufacturer",
     "sot": "Kind regards,",
-    "son": "Leo",
+    "son": "",
     "nb" : "",
     "f"  : ""
   },
@@ -203,7 +203,7 @@
     "ne" : false,
     "rte": "manufacturer",
     "sot": "Kind regards,",
-    "son": "Rosemary",
+    "son": "",
     "nb" : "",
     "f"  : ""
   },
@@ -219,7 +219,7 @@
     "ne" : false,
     "rte": "simple",
     "sot": "Kind regards,",
-    "son": "Shirley",
+    "son": "",
     "nb" : "",
     "f"  : ""
   },
@@ -235,7 +235,7 @@
     "ne" : false,
     "rte": "simple",
     "sot": "Kind regards,",
-    "son": "Aaron",
+    "son": "",
     "nb" : "",
     "f"  : ""
   },
@@ -251,7 +251,7 @@
     "ne" : false,
     "rte": "distributor",
     "sot": "Kind regards,",
-    "son": "Nicole",
+    "son": "",
     "nb" : "",
     "f"  : ""
   },
@@ -267,7 +267,7 @@
     "ne" : false,
     "rte": "distributor",
     "sot": "Kind regards,",
-    "son": "Scott",
+    "son": "",
     "nb" : "",
     "f"  : ""
   },
@@ -283,7 +283,7 @@
     "ne" : false,
     "rte": "distributor",
     "sot": "Kind regards,",
-    "son": "Alison",
+    "son": "",
     "nb" : "",
     "f"  : ""
   },
@@ -299,7 +299,7 @@
     "ne" : false,
     "rte": "distributor",
     "sot": "Kind regards,",
-    "son": "Kate ",
+    "son": "",
     "nb" : "",
     "f"  : ""
   },
@@ -315,7 +315,7 @@
     "ne" : false,
     "rte": "simple",
     "sot": "Kind regards,",
-    "son": "Joe",
+    "son": "",
     "nb" : "",
     "f"  : ""
   },
@@ -331,7 +331,7 @@
     "ne" : false,
     "rte": "simple",
     "sot": "Kind regards,",
-    "son": "Rich",
+    "son": "",
     "nb" : "",
     "f"  : ""
   },
@@ -347,7 +347,7 @@
     "ne" : false,
     "rte": "simple",
     "sot": "Kind regards,",
-    "son": "Lachlan",
+    "son": "",
     "nb" : "",
     "f"  : ""
   },
@@ -363,7 +363,7 @@
     "ne" : false,
     "rte": "simple",
     "sot": "Kind regards,",
-    "son": "Mark",
+    "son": "",
     "nb" : "",
     "f"  : ""
   },
@@ -379,7 +379,7 @@
     "ne" : false,
     "rte": "simple",
     "sot": "Kind regards,",
-    "son": "David",
+    "son": "",
     "nb" : "",
     "f"  : ""
   },
@@ -395,7 +395,39 @@
     "ne" : false,
     "rte": "distributor",
     "sot": "Kind regards,",
-    "son": "Loreen",
+    "son": "",
+    "nb" : "",
+    "f"  : ""
+  },
+  "margery@resilift.com.au"         : {
+    "n"  : "Margery Jensen",
+    "t"  : "Distributor",
+    "tl" : "Distributor",
+    "l"  : "Tasmania",
+    "pd" : "0407 843 324",
+    "pl" : "+61407843324",
+    "d"  : "Residential Lift Company Tasmania",
+    "te" : "distributor",
+    "ne" : false,
+    "rte": "",
+    "sot": "Kind regards,",
+    "son": "",
+    "nb" : "",
+    "f"  : ""
+  },
+  "sales.tas@resilift.com.au"       : {
+    "n"  : "Joe Carver",
+    "t"  : "Sales Consultant",
+    "tl" : "Sales Consultant",
+    "l"  : "Tasmania",
+    "pd" : "0414 923 486",
+    "pl" : "+61414923486",
+    "d"  : "Residential Lift Company Tasmania",
+    "te" : "distributor",
+    "ne" : false,
+    "rte": "",
+    "sot": "Kind regards,",
+    "son": "",
     "nb" : "",
     "f"  : ""
   }
