@@ -53,7 +53,7 @@ function buildDebugFallbackHtml(errorMessage) {
 // EDIT THIS: point at your hosted directory.json.
 // ---------------------------------------------------------------------
 const SIGNATURE_URL = "https://sig.resilift.com.au/";
-const DIRECTORY_URL = SIGNATURE_URL + "directory.json?v=5";
+const DIRECTORY_URL = SIGNATURE_URL + "directory.json?v=6";
 
 // ---------------------------------------------------------------------
 // Optional free-text/HTML sections around the signature — "nb" (notice)
