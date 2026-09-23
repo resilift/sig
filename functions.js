@@ -92,11 +92,52 @@ function buildSignOffHtml(user) {
 function buildNoticeHtml(user) {
   if (!user.nb || user.nb.toString().trim() === "") return "";
   return (
-    '<div style="margin-top: 16px; font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 17px; mso-line-height-rule: exactly; color: rgb(0, 0, 0);">' +
+    '<div style="margin-top: 16px; font-family: Arial, Helvetica, sans-serif; font-size: 15px; line-height: 17px; mso-line-height-rule: exactly; color: rgb(0, 0, 0);">' +
       user.nb +
     '</div>'
   );
 }
+
+function buildNotice1Html(user) {
+  if (!user.nb1 || user.nb1.toString().trim() === "") return "";
+  return (
+    '<table role="presentation" cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse; border-spacing:0px;">' +
+      '<tbody><tr><td style="padding-bottom:16px; mso-padding-alt:0px 0px 16px 0px;">' +
+        '<div style="font-family: Arial, Helvetica, sans-serif; font-size: 15px; line-height: 17px; mso-line-height-rule: exactly; color: rgb(0, 0, 0);">' +
+          user.nb1 +
+        '</div>' +
+      '</td></tr></tbody>' +
+    '</table>'
+  );
+}
+
+function buildNotice2Html(user) {
+  if (!user.nb2 || user.nb2.toString().trim() === "") return "";
+  return (
+    '<table role="presentation" cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse; border-spacing:0px;">' +
+      '<tbody><tr><td style="padding-bottom:16px; mso-padding-alt:0px 0px 16px 0px;">' +
+        '<div style="font-family: Arial, Helvetica, sans-serif; font-size: 15px; line-height: 17px; mso-line-height-rule: exactly; color: rgb(0, 0, 0);">' +
+          user.nb2 +
+        '</div>' +
+      '</td></tr></tbody>' +
+    '</table>'
+  );
+}
+
+function buildNotice3Html(user) {
+  if (!user.nb3 || user.nb3.toString().trim() === "") return "";
+  return (
+    '<table role="presentation" cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse; border-spacing:0px;">' +
+      '<tbody><tr><td style="padding-bottom:16px; mso-padding-alt:0px 0px 16px 0px;">' +
+        '<div style="font-family: Arial, Helvetica, sans-serif; font-size: 15px; line-height: 17px; mso-line-height-rule: exactly; color: rgb(0, 0, 0);">' +
+          user.nb3 +
+        '</div>' +
+      '</td></tr></tbody>' +
+    '</table>'
+  );
+}
+
+
 
 
 function buildFooterHtml(user) {
@@ -153,12 +194,12 @@ const TEMPLATES = {
           '<td style="padding-top:16px; padding-bottom:16px; padding-left:11px; mso-padding-alt:16px 0px 16px 11px; vertical-align:middle; width:240px">' +
             '<table cellspacing="0" cellpadding="0" style="box-sizing:border-box; border-collapse:collapse; border-spacing:0px">' +
               '<tbody><tr><td>' +
-                '<div style="margin: 0; font-family: Arial, Helvetica, sans-serif; font-size: 15px; line-height: 20px; mso-line-height-rule: exactly; color: rgb(0, 0, 0);"><b>' + escapeHtml(user.n) + '</b></div>' +
-                '<div style="margin: 0; font-family: Arial, Helvetica, sans-serif; font-size: 15px; line-height: 20px; mso-line-height-rule: exactly; color: rgb(0, 0, 0);">' + escapeHtml(user.t) + '</div>' +
-                '<div style="margin: 0; font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 19px; mso-line-height-rule: exactly; color: rgb(0, 0, 0);">' + escapeHtml(user.l) + '</div>' +
-                '<div style="margin: 0; font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 19px; mso-line-height-rule: exactly; color: rgb(0, 0, 0);"><a href="tel:' + escapeHtml(user.pl) + '" target="_blank" style="color: rgb(0, 0, 0); text-decoration: none;">' + escapeHtml(user.pd) + '</a></div>' +
-                '<div style="margin: 0; font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 19px; mso-line-height-rule: exactly; color: rgb(0, 0, 0);"><a href="tel:1300303522" target="_blank" style="color: rgb(0, 0, 0); text-decoration: none;">1300 303 522</a></div>' +
-                '<div style="margin: 0; font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 17px; mso-line-height-rule: exactly; color: rgb(0, 0, 0);"><a href="https://resilift.com.au/" style="color: rgb(0, 0, 0); text-decoration: none;">resilift.com.au</a></div>' +
+                '<div style="margin: 0; font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 22px; mso-line-height-rule: exactly; color: rgb(0, 0, 0);"><b>' + escapeHtml(user.n) + '</b></div>' +
+                '<div style="margin: 0; font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 20px; mso-line-height-rule: exactly; color: rgb(0, 0, 0);">' + escapeHtml(user.t) + '</div>' +
+                '<div style="margin: 0; font-family: Arial, Helvetica, sans-serif; font-size: 15px; line-height: 20px; mso-line-height-rule: exactly; color: rgb(0, 0, 0);">' + escapeHtml(user.l) + '</div>' +
+                '<div style="margin: 0; font-family: Arial, Helvetica, sans-serif; font-size: 15px; line-height: 20px; mso-line-height-rule: exactly; color: rgb(0, 0, 0);"><a href="tel:' + escapeHtml(user.pl) + '" target="_blank" style="color: rgb(0, 0, 0); text-decoration: none;">' + escapeHtml(user.pd) + '</a></div>' +
+                '<div style="margin: 0; font-family: Arial, Helvetica, sans-serif; font-size: 15px; line-height: 20px; mso-line-height-rule: exactly; color: rgb(0, 0, 0);"><a href="tel:1300303522" target="_blank" style="color: rgb(0, 0, 0); text-decoration: none;">1300 303 522</a></div>' +
+                '<div style="margin: 0; font-family: Arial, Helvetica, sans-serif; font-size: 15px; line-height: 17px; mso-line-height-rule: exactly; color: rgb(0, 0, 0);"><a href="https://resilift.com.au/" style="color: rgb(0, 0, 0); text-decoration: none;">resilift.com.au</a></div>' +
               '</td></tr></tbody>' +
             '</table>' +
           '</td>' +
@@ -212,13 +253,13 @@ const TEMPLATES = {
           '<td style="padding-top:16px; padding-bottom:16px; padding-left:11px; mso-padding-alt:16px 0px 16px 11px; vertical-align:middle; width:240px">' +
             '<table cellspacing="0" cellpadding="0" style="box-sizing:border-box; border-collapse:collapse; border-spacing:0px">' +
               '<tbody><tr><td>' +
-                '<div style="margin: 0; font-family: Arial, Helvetica, sans-serif; font-size: 15px; line-height: 20px; mso-line-height-rule: exactly; color: rgb(0, 0, 0);"><b>' + escapeHtml(user.n) + '</b></div>' +
-                '<div style="margin: 0; font-family: Arial, Helvetica, sans-serif; font-size: 15px; line-height: 20px; mso-line-height-rule: exactly; color: rgb(0, 0, 0);">' + escapeHtml(user.t) + '</div>' +
-                '<div style="margin: 0; font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 19px; mso-line-height-rule: exactly; color: rgb(0, 0, 0);">' + escapeHtml(user.d) + '</div>' +
-                '<div style="margin: 0; font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 19px; mso-line-height-rule: exactly; color: rgb(0, 0, 0);">Authorised RESiLIFT Distributor</div>' +
-                '<div style="margin: 0; font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 19px; mso-line-height-rule: exactly; color: rgb(0, 0, 0);"><a href="tel:' + escapeHtml(user.pl) + '" target="_blank" style="color: rgb(0, 0, 0); text-decoration: none;">' + escapeHtml(user.pd) + '</a></div>' +
-                '<div style="margin: 0; font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 19px; mso-line-height-rule: exactly; color: rgb(0, 0, 0);"><a href="tel:1300303522" target="_blank" style="color: rgb(0, 0, 0); text-decoration: none;">1300 303 522</a></div>' +
-                '<div style="margin: 0; font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 17px; mso-line-height-rule: exactly; color: rgb(0, 0, 0);"><a href="https://resilift.com.au/" style="color: rgb(0, 0, 0); text-decoration: none;">resilift.com.au</a></div>' +
+                '<div style="margin: 0; font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 22px; mso-line-height-rule: exactly; color: rgb(0, 0, 0);"><b>' + escapeHtml(user.n) + '</b></div>' +
+                '<div style="margin: 0; font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 20px; mso-line-height-rule: exactly; color: rgb(0, 0, 0);">' + escapeHtml(user.t) + '</div>' +
+                '<div style="margin: 0; font-family: Arial, Helvetica, sans-serif; font-size: 15px; line-height: 20px; mso-line-height-rule: exactly; color: rgb(0, 0, 0);">' + escapeHtml(user.d) + '</div>' +
+                '<div style="margin: 0; font-family: Arial, Helvetica, sans-serif; font-size: 15px; line-height: 20px; mso-line-height-rule: exactly; color: rgb(0, 0, 0);">Authorised RESiLIFT Distributor</div>' +
+                '<div style="margin: 0; font-family: Arial, Helvetica, sans-serif; font-size: 15px; line-height: 20px; mso-line-height-rule: exactly; color: rgb(0, 0, 0);"><a href="tel:' + escapeHtml(user.pl) + '" target="_blank" style="color: rgb(0, 0, 0); text-decoration: none;">' + escapeHtml(user.pd) + '</a></div>' +
+                '<div style="margin: 0; font-family: Arial, Helvetica, sans-serif; font-size: 15px; line-height: 20px; mso-line-height-rule: exactly; color: rgb(0, 0, 0);"><a href="tel:1300303522" target="_blank" style="color: rgb(0, 0, 0); text-decoration: none;">1300 303 522</a></div>' +
+                '<div style="margin: 0; font-family: Arial, Helvetica, sans-serif; font-size: 15px; line-height: 17px; mso-line-height-rule: exactly; color: rgb(0, 0, 0);"><a href="https://resilift.com.au/" style="color: rgb(0, 0, 0); text-decoration: none;">resilift.com.au</a></div>' +
               '</td></tr></tbody>' +
             '</table>' +
           '</td>' +
@@ -261,11 +302,34 @@ const TEMPLATES = {
 
   test: function(user) {
     return (
-      TEMPLATES.simple(user) +
-      '<p style="margin: 0; font-size: 16px; line-height: 16px; mso-line-height-rule: exactly; color: rgb(0, 0, 0);">-----</p>' +
-      TEMPLATES.distributor(user) +
-      '<p style="margin: 0; font-size: 16px; line-height: 16px; mso-line-height-rule: exactly; color: rgb(0, 0, 0);">-----</p>' +
-      TEMPLATES.manufacturer(user)
+      buildSignOffHtml(user) +
+      '<table role="presentation" cellspacing="0" cellpadding="0" border="0" ' +
+      'style="width:360px; max-width:360px; box-sizing:border-box; border-collapse:collapse; border-spacing:0px">' +
+        '<tbody><tr>' +
+          '<td style="padding-top:16px; padding-bottom:16px; mso-padding-alt:16px 0px 16px 0px; vertical-align:middle; width:120px">' +
+            '<div style="font-family: Arial, Helvetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);">' +
+              '<img src="' + SIGNATURE_URL + 'assets/RESiLIFT_signature_logo_240px.png" ' +
+              'alt="RESiLIFT Logo" width="120" height="88" style="width: 120px; height: 88px; display: block;">' +
+            '</div>' +
+          '</td>' +
+          '<td style="padding-top:16px; padding-bottom:16px; padding-left:11px; mso-padding-alt:16px 0px 16px 11px; vertical-align:middle; width:240px">' +
+            '<table cellspacing="0" cellpadding="0" style="box-sizing:border-box; border-collapse:collapse; border-spacing:0px">' +
+              '<tbody><tr><td>' +
+                '<div style="margin: 0; font-family: Arial, Helvetica, sans-serif; font-size: 15px; line-height: 20px; mso-line-height-rule: exactly; color: rgb(0, 0, 0);"><b>' + escapeHtml(user.n) + '</b></div>' +
+                '<div style="margin: 0; font-family: Arial, Helvetica, sans-serif; font-size: 15px; line-height: 20px; mso-line-height-rule: exactly; color: rgb(0, 0, 0);">' + escapeHtml(user.t) + '</div>' +
+                '<div style="margin: 0; font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 19px; mso-line-height-rule: exactly; color: rgb(0, 0, 0);">' + escapeHtml(user.l) + '</div>' +
+                '<div style="margin: 0; font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 19px; mso-line-height-rule: exactly; color: rgb(0, 0, 0);"><a href="tel:' + escapeHtml(user.pl) + '" target="_blank" style="color: rgb(0, 0, 0); text-decoration: none;">' + escapeHtml(user.pd) + '</a></div>' +
+                '<div style="margin: 0; font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 19px; mso-line-height-rule: exactly; color: rgb(0, 0, 0);"><a href="tel:1300303522" target="_blank" style="color: rgb(0, 0, 0); text-decoration: none;">1300 303 522</a></div>' +
+                '<div style="margin: 0; font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 17px; mso-line-height-rule: exactly; color: rgb(0, 0, 0);"><a href="https://resilift.com.au/" style="color: rgb(0, 0, 0); text-decoration: none;">resilift.com.au</a></div>' +
+              '</td></tr></tbody>' +
+            '</table>' +
+          '</td>' +
+        '</tr></tbody>' +
+      '</table>' +
+      buildNotice1Html(user) +
+      buildNotice2Html(user) +
+      buildNotice3Html(user) +
+      buildFooterHtml(user)
     );
   }
 
