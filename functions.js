@@ -53,7 +53,7 @@ function buildDebugFallbackHtml(errorMessage) {
 // EDIT THIS: point at your hosted directory.json.
 // ---------------------------------------------------------------------
 const SIGNATURE_URL = "https://sig.resilift.com.au/";
-const DIRECTORY_URL = SIGNATURE_URL + "directory.json?v=6";
+const DIRECTORY_URL = SIGNATURE_URL + "directory.json?v=7";
 
 // ---------------------------------------------------------------------
 // Optional free-text/HTML sections around the signature — "nb" (notice)
@@ -87,7 +87,6 @@ function buildSignOffHtml(user) {
 
   return html;
 }
-
 
 function buildNoticeHtml(user) {
   if (!user.nb || user.nb.toString().trim() === "") return "";
@@ -137,9 +136,6 @@ function buildNotice3Html(user) {
   );
 }
 
-
-
-
 function buildFooterHtml(user) {
   if (!user.f || user.f.toString().trim() === "") return "";
   return (
@@ -181,7 +177,6 @@ const TEMPLATES = {
   simple: function (user) {
     return (
       buildSignOffHtml(user) +
-      buildNoticeHtml(user) +
       '<table role="presentation" cellspacing="0" cellpadding="0" border="0" ' +
       'style="width:360px; max-width:360px; box-sizing:border-box; border-collapse:collapse; border-spacing:0px">' +
         '<tbody><tr>' +
@@ -205,42 +200,16 @@ const TEMPLATES = {
           '</td>' +
         '</tr></tbody>' +
       '</table>' +
+      buildNotice1Html(user) +
+      buildNotice2Html(user) +
+      buildNotice3Html(user) +
       buildFooterHtml(user)
     );
   },
 
-  // simple_v1: function (user) {
-  //   return (
-  //     buildNoticeHtml(user) +
-  //     '<p style="margin: 0; font-size: 16px; line-height: 16px; mso-line-height-rule: exactly; color: rgb(0, 0, 0);">&nbsp;</p>' + // works
-  //     '<table role="presentation" cellspacing="0" cellpadding="0" border="0" style="width:360px; max-width:360px; box-sizing:border-box; border-collapse:collapse; border-spacing:0px">' +
-  //       '<tbody>' +
-  //           '<tr>' +
-  //               '<td style="vertical-align:middle; width:110px">' +
-  //                   '<div style="font-family: Arial, Helvetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);"><img src="' + SIGNATURE_URL + 'assets/RESiLIFT_signature_logo_220px.png" alt="RESiLIFT Logo" width="110" height="81" style="width: 110px; height: 81px; display: block;"></div>' +
-  //               '</td>' +
-  //               '<td style="padding-left:10px; vertical-align:middle; width:250px">' +
-  //                 '<table cellspacing="0" cellpadding="0" style="box-sizing:border-box; border-collapse:collapse; border-spacing:0px">' +
-  //                   '<tbody><tr><td>' +
-  //                     '<div style="margin: 0; font-family: Arial, Helvetica, sans-serif; font-size: 15px; line-height: 21px; mso-line-height-rule: exactly; color: rgb(0, 0, 0);"><b style="">' + escapeHtml(user.n) + '</b></div>' +
-  //                     '<div style="margin: 0; font-family: Arial, Helvetica, sans-serif; font-size: 15px; line-height: 20px; mso-line-height-rule: exactly; color: rgb(0, 0, 0);">' + escapeHtml(user.tl) + '</div>' +
-  //                     '<div style="margin: 0; font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 18px; mso-line-height-rule: exactly; color: rgb(0, 0, 0);"><a href="tel:' + escapeHtml(user.pl) + '" target="_blank" style="color: rgb(0, 0, 0); text-decoration: none;">' + escapeHtml(user.pd) + '</a></div>' +
-  //                     '<div style="margin: 0; font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 18px; mso-line-height-rule: exactly; color: rgb(0, 0, 0);"><a href="tel:1300303522" target="_blank" style="color: rgb(0, 0, 0); text-decoration: none;">1300 303 522</a></div>' +
-  //                     '<div style="margin: 0; font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 16px; mso-line-height-rule: exactly; color: rgb(0, 0, 0);"><a href="https://resilift.com.au/" target="_blank" style="color: rgb(0, 0, 0); text-decoration: none;">resilift.com.au</a></div>' +                    '</td></tr></tbody>' +
-  //                 '</table>' +
-  //               '</td>' +
-  //           '</tr>' +
-  //       '</tbody>' +
-  //     '</table>' +
-  //     '<p style="margin: 0; font-size: 16px; line-height: 16px; mso-line-height-rule: exactly; color: rgb(0, 0, 0);">&nbsp;</p>' + // works
-  //     buildFooterHtml(user)
-  //   );
-  // },
-
   distributor: function (user) {
     return (
       buildSignOffHtml(user) +
-      buildNoticeHtml(user) +
       '<table role="presentation" cellspacing="0" cellpadding="0" border="0" ' +
       'style="width:360px; max-width:360px; box-sizing:border-box; border-collapse:collapse; border-spacing:0px">' +
         '<tbody><tr>' +
@@ -265,6 +234,9 @@ const TEMPLATES = {
           '</td>' +
         '</tr></tbody>' +
       '</table>' +
+      buildNotice1Html(user) +
+      buildNotice2Html(user) +
+      buildNotice3Html(user) +
       buildFooterHtml(user)
     );
   },
@@ -272,7 +244,6 @@ const TEMPLATES = {
   manufacturer: function (user) {
     return (
       buildSignOffHtml(user) +
-      buildNoticeHtml(user) +
       '<table role="presentation" cellspacing="0" cellpadding="0" border="0" ' +
       'style="width:360px; max-width:360px; box-sizing:border-box; border-collapse:collapse; border-spacing:0px">' +
         '<tbody><tr>' +
@@ -296,6 +267,9 @@ const TEMPLATES = {
           '</td>' +
         '</tr></tbody>' +
       '</table>' +
+      buildNotice1Html(user) +
+      buildNotice2Html(user) +
+      buildNotice3Html(user) +
       buildFooterHtml(user)
     );
   },
